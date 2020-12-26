@@ -28,8 +28,13 @@ board](https://learn.adafruit.com/bluefruit-nrf52-feather-learning-guide/arduino
 
 I needed to install [this Silicon Labs VCP
 driver](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) to
-have a suitable serial port show up in my system.
+have a suitable serial port show up in my system.  I also needed to change
+cables before the board showed up in my system (as `/dev/tty.SLAB_USBtoUART`).
 
-I also [updated the
+I [updated the
 bootloader](https://learn.adafruit.com/bluefruit-nrf52-feather-learning-guide/updating-the-bootloader)
 since I was using the older nRF52832 board.
+
+### First test
+The sketch in `src/test_blinky_sketch` blinks the red LED by the USB port on
+the board on and off once a second.
