@@ -38,3 +38,22 @@ since I was using the older nRF52832 board.
 ### First test
 The sketch in `src/test_blinky_sketch` blinks the red LED by the USB port on
 the board on and off once a second.
+
+### Wiring buttons
+I wired buttons to [pin 7 and 11](https://learn.adafruit.com/assets/46248) and wrote
+a quick sketch to test [reading the value](https://learn.adafruit.com/adafruit-arduino-lesson-6-digital-inputs?view=all).
+
+Eventually it may be interesting to use [button breakout
+boards](https://learn.adafruit.com/ble-hid-keyboard-buttons-with-circuitpython/ble-keyboard-buttons)
+like [these](https://www.adafruit.com/product/4431).
+
+### Bluetooth
+The [Bluetooth HID keyboard
+example](https://github.com/adafruit/Adafruit_nRF52_Arduino/blob/master/libraries/Bluefruit52Lib/examples/Peripheral/hid_keyboard/hid_keyboard.ino)
+is useful for showing how to bond the board to a host device. I initially had
+some problem with serial data being garbled but it turned out to be fixable
+by making my USB cables were seated correctly.
+
+When running, the board can have a battery installed and be unplugged from the USB.
+
+The [Bluetooth HID API](https://learn.adafruit.com/bluefruit-nrf52-feather-learning-guide/blehidadafruit) has a few different methods to send key press data to the host.
