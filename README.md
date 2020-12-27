@@ -36,7 +36,7 @@ bootloader](https://learn.adafruit.com/bluefruit-nrf52-feather-learning-guide/up
 since I was using the older nRF52832 board.
 
 ### First test
-The sketch in `src/test_blinky_sketch` blinks the red LED by the USB port on
+The sketch in `src/arduino/test_blink` blinks the red LED by the USB port on
 the board on and off once a second.
 
 ### Wiring buttons
