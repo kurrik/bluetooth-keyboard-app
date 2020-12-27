@@ -57,3 +57,7 @@ by making my USB cables were seated correctly.
 When running, the board can have a battery installed and be unplugged from the USB.
 
 The [Bluetooth HID API](https://learn.adafruit.com/bluefruit-nrf52-feather-learning-guide/blehidadafruit) has a few different methods to send key press data to the host.
+
+## References
+* [Keyboard modifiers](https://github.com/adafruit/Adafruit_nRF52_Arduino/blob/200b3aaefb3256ac26df82ebc9b5b58923d9c37c/cores/nRF5/Adafruit_TinyUSB_Core/tinyusb/src/class/hid/hid.h#L188)
+* [Key codes](https://github.com/adafruit/Adafruit_nRF52_Arduino/blob/200b3aaefb3256ac26df82ebc9b5b58923d9c37c/cores/nRF5/Adafruit_TinyUSB_Core/tinyusb/src/class/hid/hid.h#L212)
