@@ -51,7 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}	set theDialogText to "Hello! It is " &amp; (current date) &amp; "."	display dialog theDialogText	return inputend run</string>
+					<string>on run {input, parameters}	set theDialogText to "Red Button Pressed! It is " &amp; (current date) &amp; "."	display dialog theDialogText	return inputend run</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -105,7 +105,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>309.000000:368.000000</string>
+				<string>369.500000:368.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
