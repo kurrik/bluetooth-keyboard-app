@@ -5,6 +5,7 @@ BLEHidAdafruit blehid;
 
 int buttonApin = 11;
 int buttonBpin = 7;
+int ledApin = 15;
 
 unsigned long lastPressed;
 bool buttonsEnabled;
@@ -14,6 +15,7 @@ void setup() {
   // Button setup
   pinMode(buttonApin, INPUT_PULLUP);  
   pinMode(buttonBpin, INPUT_PULLUP);
+  pinMode(ledApin, OUTPUT);
   buttonsEnabled = true;
     
   // Bluetooth setup
@@ -28,6 +30,10 @@ void setup() {
   bledis.begin();
   blehid.begin();
   startAdvertising();
+
+  digitalWrite(ledApin, HIGH);
+  delay(1000);
+  digitalWrite(ledApin, LOW);
 }
 
 void startAdvertising(void) {  
@@ -49,9 +55,11 @@ void loop() {
   if (!buttonsEnabled) {
     if ((millis() - lastPressed) > 1000) {
       ledOff(LED_RED);
+      digitalWrite(ledApin, LOW);
       buttonsEnabled = true;
     } else {
       ledOn(LED_RED);
+      digitalWrite(ledApin, HIGH);
     }
   }
   if (buttonsEnabled) {
